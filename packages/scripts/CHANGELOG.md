@@ -1,5 +1,11 @@
 # @jman.dev/scripts
 
+## 0.0.3
+
+### Patch Changes
+
+- 6bc80b0: add prettier command
+
 ## 0.0.2
 
 ### Patch Changes
