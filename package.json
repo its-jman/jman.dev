@@ -9,6 +9,7 @@
 	"prettier": "@jman.dev/prettier-config",
 	"scripts": {
 		"lint": "eslint",
+		"changeset": "changeset",
 		"release": "jman is-git-clean && changeset version && changeset publish && git push --follow-tags"
 	},
 	"devDependencies": {
