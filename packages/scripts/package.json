@@ -1,5 +1,5 @@
 {
-	"name": "@jman.dev/scripts",
+	"name": "jman",
 	"description": "general purpose utils (jman.dev)",
 	"version": "0.0.2",
 	"bin": {
