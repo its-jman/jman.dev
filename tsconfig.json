@@ -5,6 +5,7 @@
 		"noEmit": true,
 		"resolveJsonModule": true,
 		"noUnusedParameters": false,
+		"noUnusedLocals": false,
 		// Required for json import? Seems dumb...
 		"module": "nodenext"
 	}
