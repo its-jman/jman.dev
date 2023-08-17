@@ -1,5 +1,9 @@
 {
-  "name": "@jman.dev/prettier-config",
-  "version": "0.1.7",
-  "main": "index.js"
+	"name": "@jman.dev/prettier-config",
+	"version": "0.1.7",
+	"main": "index.js",
+	"exports": {
+		".": "./index.js",
+		"./with-astro": "./with-astro.js"
+	}
 }
