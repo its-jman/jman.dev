@@ -17,7 +17,7 @@
 		"@changesets/cli": "^2.26.1",
 		"@jman.dev/eslint-config": "workspace:*",
 		"@jman.dev/prettier-config": "workspace:*",
-		"@jman.dev/scripts": "workspace:*",
+		"jman": "workspace:*",
 		"@jman.dev/tsconfig": "workspace:*",
 		"@tsconfig/node18": "^18.2.0",
 		"@tsconfig/strictest": "^2.0.1",

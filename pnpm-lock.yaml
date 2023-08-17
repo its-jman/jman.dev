@@ -20,9 +20,6 @@ importers:
       '@jman.dev/prettier-config':
         specifier: workspace:*
         version: link:packages/prettier-config
-      '@jman.dev/scripts':
-        specifier: workspace:*
-        version: link:packages/scripts
       '@jman.dev/tsconfig':
         specifier: workspace:*
         version: link:packages/tsconfig
@@ -38,6 +35,9 @@ importers:
       eslint:
         specifier: ^8.42.0
         version: 8.42.0
+      jman:
+        specifier: workspace:*
+        version: link:packages/scripts
 
   packages/eslint-config:
     dependencies:

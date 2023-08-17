@@ -71,4 +71,33 @@ program
 		fs.writeFileSync(localPaths.packageJson, JSON.stringify(out, null, 2))
 	})
 
+program
+	.command('init')
+	.option('-n, --name', 'name of package')
+	.option('-C <dir>', 'change execution directory')
+	.description('Initalize package json for a project')
+	.action(async (opts) => {
+		if (opts.C) process.chdir(opts.C)
+		if (fs.existsSync('./package.json')) {
+			throw new Error('package.json already exists')
+		}
+		fs.writeFileSync(
+			'./package.json',
+			JSON.stringify(
+				{
+					name: opts.name ?? path.basename(process.cwd()),
+					version: '0.0.0',
+					type: 'module',
+					prettier: '@jman.dev/prettier-config',
+					scripts: {},
+					devDependencies: {},
+				},
+				null,
+				'	'
+			)
+		)
+		const DEV_DEPENDENCIES = ['@jman.dev/prettier-config', 'esno']
+		await $`ni -D ${DEV_DEPENDENCIES}`
+	})
+
 program.parse()
