@@ -1,5 +1,11 @@
 # @jman.dev/scripts
 
+## 0.0.5
+
+### Patch Changes
+
+- d3b5fe4: Add prettier as dependency
+
 ## 0.0.4
 
 ### Patch Changes
