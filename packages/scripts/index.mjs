@@ -58,7 +58,8 @@ program
 				`Failed to read package.json. Tried here: ${localPaths.packageJson}`
 			)
 		}
-		await $`${opts.npm ? ['npm', 'i'] : 'ni'} -D @jman.dev/prettier-config@latest`
+		const DEV_DEPENDENCIES = ['prettier@latest', '@jman.dev/prettier-config@latest']
+		await $`ni -D ${DEV_DEPENDENCIES}`
 		// reorder to insert `prettier` just before `(dev)dependencies`
 		/** @type Record<string, any> */
 		const out = {}
