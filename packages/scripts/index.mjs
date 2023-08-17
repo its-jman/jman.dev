@@ -97,7 +97,7 @@ program
 				'	'
 			)
 		)
-		const DEV_DEPENDENCIES = ['@jman.dev/prettier-config', 'esno']
+		const DEV_DEPENDENCIES = ['prettier', '@jman.dev/prettier-config', 'esno']
 		await $`ni -D ${DEV_DEPENDENCIES}`
 	})
 
