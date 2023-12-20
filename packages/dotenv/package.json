@@ -1,36 +1,37 @@
 {
-	"name": "@jman.dev/dotenv",
-	"version": "0.0.1",
-	"type": "module",
-	"scripts": {
-		"prepare": "tshy"
-	},
-	"dependencies": {
-		"dotenv": "^16.3.1"
-	},
-	"devDependencies": {
-		"tshy": "^1.8.2",
-		"typescript": "^5.3.3"
-	},
-	"tshy": {
-		"exports": {
-			"./package.json": "./package.json",
-			".": "./src/index.ts"
-		}
-	},
-	"exports": {
-		"./package.json": "./package.json",
-		".": {
-			"import": {
-				"types": "./dist/esm/index.d.ts",
-				"default": "./dist/esm/index.js"
-			},
-			"require": {
-				"types": "./dist/commonjs/index.d.ts",
-				"default": "./dist/commonjs/index.js"
-			}
-		}
-	},
-	"main": "./dist/commonjs/index.js",
-	"types": "./dist/commonjs/index.d.ts"
+  "name": "@jman.dev/dotenv",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "prepare": "tshy"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "zod-validation-error": "^2.1.0"
+  },
+  "devDependencies": {
+    "tshy": "^1.8.2",
+    "typescript": "^5.3.3"
+  },
+  "tshy": {
+    "exports": {
+      "./package.json": "./package.json",
+      ".": "./src/index.ts"
+    }
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/commonjs/index.d.ts",
+        "default": "./dist/commonjs/index.js"
+      }
+    }
+  },
+  "main": "./dist/commonjs/index.js",
+  "types": "./dist/commonjs/index.d.ts"
 }

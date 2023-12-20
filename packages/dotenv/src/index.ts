@@ -1,4 +1,5 @@
 import {config as loadDotenv} from 'dotenv'
+import {ZodError, fromZodError} from 'zod-validation-error'
 
 interface LoadConfig<T> {
 	path?: string
@@ -10,5 +11,12 @@ export function load<T = Record<string, string>>(
 	config?: LoadConfig<T>
 ): T {
 	const out = loadDotenv({path: config?.path, processEnv: {}}).parsed!
-	return config?.schema?.parse(out) ?? (out as T)
+	if (config?.schema) {
+		try {
+			return config?.schema.parse(out)
+		} catch (err) {
+			throw fromZodError(err as ZodError)
+		}
+	}
+	return out as T
 }
