@@ -1,5 +1,11 @@
 # @jman.dev/scripts
 
+## 0.0.6
+
+### Patch Changes
+
+- 23e67f0: Fix package json rewrite to include dependences
+
 ## 0.0.5
 
 ### Patch Changes
