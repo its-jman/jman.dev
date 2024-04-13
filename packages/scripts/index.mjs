@@ -44,22 +44,18 @@ program
 		const localPaths = {
 			packageJson: path.join(projectDir, 'package.json'),
 		}
-		const json = (() => {
-			try {
-				const text = fs.readFileSync(localPaths.packageJson, 'utf-8')
-				return JSON.parse(text)
-			} catch {
-				return null
-			}
-		})()
 
-		if (!json) {
+		if (!fs.existsSync(localPaths.packageJson)) {
 			throw new Error(
 				`Failed to read package.json. Tried here: ${localPaths.packageJson}`
 			)
 		}
 		const DEV_DEPENDENCIES = ['prettier@latest', '@jman.dev/prettier-config@latest']
 		await $`ni -D ${DEV_DEPENDENCIES}`
+
+		const jsonRawText = fs.readFileSync(localPaths.packageJson, 'utf-8')
+		const json = JSON.parse(jsonRawText)
+
 		// reorder to insert `prettier` just before `(dev)dependencies`
 		/** @type Record<string, any> */
 		const out = {}
