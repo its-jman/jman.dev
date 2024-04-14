@@ -1,0 +1,5 @@
+---
+'jman': patch
+---
+
+add -w
