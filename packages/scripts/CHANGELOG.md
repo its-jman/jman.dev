@@ -1,5 +1,11 @@
 # @jman.dev/scripts
 
+## 0.0.7
+
+### Patch Changes
+
+- 2de0f97: add -w
+
 ## 0.0.6
 
 ### Patch Changes
