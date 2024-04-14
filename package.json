@@ -13,15 +13,15 @@
 		"release": "jman is-git-clean && changeset version && changeset publish && git push --follow-tags"
 	},
 	"devDependencies": {
-		"@arethetypeswrong/cli": "^0.4.2",
-		"@changesets/cli": "^2.26.1",
+		"@arethetypeswrong/cli": "^0.15.3",
+		"@changesets/cli": "^2.27.1",
 		"@jman.dev/eslint-config": "workspace:*",
 		"@jman.dev/prettier-config": "workspace:*",
 		"jman": "workspace:*",
 		"@jman.dev/tsconfig": "workspace:*",
-		"@tsconfig/node18": "^18.2.0",
-		"@tsconfig/strictest": "^2.0.1",
-		"@types/node": "^18",
+		"@tsconfig/node18": "^18.2.4",
+		"@tsconfig/strictest": "^2.0.5",
+		"@types/node": "^20",
 		"eslint": "^8.42.0"
 	}
 }

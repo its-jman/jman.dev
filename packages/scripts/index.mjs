@@ -51,7 +51,7 @@ program
 			)
 		}
 		const DEV_DEPENDENCIES = ['prettier@latest', '@jman.dev/prettier-config@latest']
-		await $`ni -D ${DEV_DEPENDENCIES}`
+		await $`ni -D -w ${DEV_DEPENDENCIES}`
 
 		const jsonRawText = fs.readFileSync(localPaths.packageJson, 'utf-8')
 		const json = JSON.parse(jsonRawText)
