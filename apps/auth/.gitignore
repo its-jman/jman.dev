@@ -1,0 +1,4 @@
+.dev.vars
+.wrangler
+dist
+src/app/routeTree.gen.ts
